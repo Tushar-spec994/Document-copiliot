@@ -19,14 +19,14 @@ The critical path is **data model → ingestion → retrieval → LLM → citati
 
 ## Phase 0 — Prerequisites & foundation
 
-- [] Install toolchain: Python 3.12+, `uv`, Node 20+, `pnpm` (see [README](../README.md))
-- [] Create Supabase project and collect credentials ([supabase-setup](guides/supabase-setup.md))
-- [] Create Gemini API key (needed from Phase 6 onward)
-- [] Set `USER_AGENT` in `data/download.py` and download sample 10-K corpus:
+- [X] Install toolchain: Python 3.12+, `uv`, Node 20+, `pnpm` (see [README](../README.md))
+- [X] Create Supabase project and collect credentials ([supabase-setup](guides/supabase-setup.md))
+- [X] Create Gemini API key (needed from Phase 6 onward)
+- [X] Set `USER_AGENT` in `data/download.py` and download sample 10-K corpus:
   ```bash
   uv run data/download.py
   ```
-- [] Confirm `data/downloads/manifest.json` lists AAPL, MSFT, NVDA, AMZN, GOOGL filings (2021–2025)
+- [X] Confirm `data/downloads/manifest.json` lists AAPL, MSFT, NVDA, AMZN, GOOGL filings (2021–2025)
 
 ---
 
@@ -34,9 +34,9 @@ The critical path is **data model → ingestion → retrieval → LLM → citati
 
 Goal: a running FastAPI service with a migrated Supabase schema.
 
-- [] Init backend deps and project layout ([backend-setup](guides/backend-setup.md))
-- [] `app/config.py` — settings module, fail fast on missing env vars
-- [] `app/main.py` — FastAPI app, CORS, health check (`GET /health`)
+- [X] Init backend deps and project layout ([backend-setup](guides/backend-setup.md))
+- [X] `app/config.py` — settings module, fail fast on missing env vars
+- [X] `app/main.py` — FastAPI app, CORS, health check (`GET /health`)
 - [] SQLAlchemy models in `app/database/models/`:
   - [] `users`
   - [] `source_documents`
